@@ -11,7 +11,7 @@ int main() {
 
 	std::string singlename;
 
-	// http://www.cplusplus.com/reference/istream/istream/getline/
+	// http://www.cplusplus.com/reference/string/string/getline/
 	while (std::getline(names, singlename, '-')) {
 		std::cout << static_cast<char> (toupper(singlename[0]));
 	}
