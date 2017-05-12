@@ -2,15 +2,18 @@
 #include <sstream>
 
 int main() {
-	std::string names;
-	std::cin >> names;
+	std::string input;
+	std::cin >> input;
 
-	std::istringstream stringstream(names);
+	// http://www.cplusplus.com/reference/sstream/istringstream/
+	// http://www.cplusplus.com/reference/sstream/istringstream/istringstream/
+	std::istringstream names(input);
 
-	std::string token;
+	std::string singlename;
 
-	while (std::getline(stringstream, token, '-')) {
-		std::cout << static_cast<char> (toupper(token[0]));
+	// http://www.cplusplus.com/reference/istream/istream/getline/
+	while (std::getline(names, singlename, '-')) {
+		std::cout << static_cast<char> (toupper(singlename[0]));
 	}
 
 	return 0;
